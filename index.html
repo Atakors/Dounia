@@ -1,0 +1,1891 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>عيظ دنيا (Aidh Dounia) | مترشحة المجلس الشعبي الولائي لولاية البليدة - القائمة 13 رقم 46</title>
+  <meta name="description" content="الحملة الانتخابية للمترشحة عيظ دنيا (Aidh Dounia) لانتخابات المجلس الشعبي الولائي لولاية البليدة عن جبهة الجزائر الجديدة - القائمة رقم 13، المترشحة رقم 46. توصيل صوت الشعب للجهات المعنية والحرص على إيجاد جواب مقنع وتغيير إن أمكن." />
+
+  <!-- Google Fonts: Cairo & Tajawal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --brand-primary: #0056D2;       /* Primary Blue - Brand Core */
+      --brand-navy: #0D1B2A;          /* Deep Navy - Contrast & Dark Backgrounds */
+      --brand-sky: #3FA9F5;           /* Light Sky Blue - Secondary Highlight */
+      --brand-white: #FFFFFF;         /* Neutral White - Text Contrast & Surface */
+      --brand-gray: #F5F7FA;          /* Soft Gray - Interface & Card Backgrounds */
+      --brand-orange: #FF8C42;        /* Accent Orange - Energy & Callouts */
+      --brand-green: #00B37E;         /* Success Green - Validation & Positive Actions */
+      --grad-main: linear-gradient(135deg, #0056D2, #3FA9F5);
+      --grad-dark: linear-gradient(135deg, #0D1B2A, #0056D2);
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --shadow-card: 0 4px 20px rgba(13, 27, 42, 0.08);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: 'Cairo', 'Tajawal', sans-serif;
+      background-color: var(--brand-gray);
+      color: var(--brand-navy);
+      line-height: 1.7;
+    }
+
+    body {
+      overflow-x: hidden;
+      background-color: var(--brand-gray);
+      color: var(--brand-navy);
+      position: relative;
+    }
+
+    /* Subtle Geometric Algerian Arch Pattern Overlay */
+    .bg-pattern {
+      background-image: radial-gradient(rgba(63, 169, 245, 0.14) 1.5px, transparent 1.5px),
+                        radial-gradient(rgba(0, 86, 210, 0.08) 1.5px, transparent 1.5px);
+      background-size: 32px 32px;
+      background-position: 0 0, 16px 16px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Scroll Progress Indicator */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--brand-orange), var(--brand-sky), var(--brand-green));
+      width: 0%;
+      z-index: 2000;
+      transition: width 0.1s ease-out;
+    }
+
+    /* Top Civic Announcement Bar */
+    .top-bar {
+      background-color: var(--brand-navy);
+      color: var(--brand-white);
+      font-size: 0.875rem;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid rgba(63, 169, 245, 0.2);
+    }
+
+    .top-bar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .top-bar-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+    }
+
+    .top-bar-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--brand-green);
+      box-shadow: 0 0 0 4px rgba(0, 179, 126, 0.25);
+      animation: pulseDot 2s infinite;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.25); opacity: 0.75; }
+    }
+
+    .top-bar-numbers {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 700;
+    }
+
+    .pill-badge {
+      padding: 0.2rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .pill-badge.list {
+      background: rgba(63, 169, 245, 0.18);
+      color: var(--brand-sky);
+      border: 1px solid rgba(63, 169, 245, 0.35);
+    }
+
+    .pill-badge.candidate {
+      background: var(--brand-orange);
+      color: var(--brand-navy);
+      font-weight: 800;
+    }
+
+    /* Sticky Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(13, 27, 42, 0.08);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .site-header.scrolled {
+      box-shadow: var(--shadow-card);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 78px;
+      gap: 1rem;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .brand-monogram {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background: var(--grad-dark);
+      color: var(--brand-white);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 1.25rem;
+      box-shadow: 0 6px 16px rgba(0, 86, 210, 0.25);
+      border: 2px solid var(--brand-sky);
+      position: relative;
+    }
+
+    .brand-monogram span {
+      font-size: 0.7rem;
+      position: absolute;
+      bottom: -6px;
+      left: -6px;
+      background: var(--brand-orange);
+      color: var(--brand-navy);
+      font-weight: 900;
+      padding: 0 5px;
+      border-radius: 6px;
+      line-height: 1.4;
+    }
+
+    .brand-title {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title strong {
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: var(--brand-navy);
+      line-height: 1.2;
+    }
+
+    .brand-title small {
+      font-size: 0.8rem;
+      color: var(--brand-primary);
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 700;
+      font-size: 0.96rem;
+      color: var(--brand-navy);
+      position: relative;
+      padding: 0.35rem 0;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 3px;
+      border-radius: 2px;
+      background: var(--brand-primary);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--brand-primary);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--grad-main);
+      color: var(--brand-white);
+      font-weight: 800;
+      font-size: 0.92rem;
+      padding: 0.65rem 1.25rem;
+      border-radius: var(--radius-md);
+      box-shadow: 0 6px 18px rgba(0, 86, 210, 0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0, 86, 210, 0.35);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      background: var(--brand-gray);
+      color: var(--brand-navy);
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: var(--grad-dark);
+      color: var(--brand-white);
+      position: relative;
+      overflow: hidden;
+      padding: 4.5rem 0 5.5rem;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 15% 20%, rgba(63, 169, 245, 0.22) 0%, transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(255, 140, 66, 0.16) 0%, transparent 40%);
+      pointer-events: none;
+    }
+
+    .hero-watermark {
+      position: absolute;
+      left: -2%;
+      bottom: -8%;
+      font-size: clamp(12rem, 24vw, 22rem);
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.03);
+      line-height: 0.8;
+      user-select: none;
+      pointer-events: none;
+      font-family: 'Cairo', sans-serif;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3rem;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .party-ribbon {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(63, 169, 245, 0.4);
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .party-ribbon-badge {
+      background: var(--brand-sky);
+      color: var(--brand-navy);
+      font-weight: 900;
+      font-size: 0.78rem;
+      padding: 0.15rem 0.6rem;
+      border-radius: 999px;
+    }
+
+    .party-ribbon-text {
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--brand-white);
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-title .highlight-name {
+      color: var(--brand-sky);
+      display: inline-block;
+      position: relative;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .mission-quote-box {
+      background: rgba(13, 27, 42, 0.55);
+      border-right: 5px solid var(--brand-orange);
+      padding: 1.25rem 1.5rem;
+      border-radius: var(--radius-md);
+      margin-bottom: 2rem;
+      backdrop-filter: blur(8px);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-left: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .mission-quote-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: var(--brand-orange);
+      font-weight: 800;
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .mission-quote-text {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--brand-white);
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .btn-primary-orange {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      background: var(--brand-orange);
+      color: var(--brand-navy);
+      font-weight: 900;
+      font-size: 1.05rem;
+      padding: 0.95rem 1.75rem;
+      border-radius: var(--radius-md);
+      box-shadow: 0 10px 25px rgba(255, 140, 66, 0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+
+    .btn-primary-orange:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(255, 140, 66, 0.5);
+      background: #ff9b59;
+    }
+
+    .btn-secondary-glass {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--brand-white);
+      border: 1.5px solid rgba(255, 255, 255, 0.3);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.9rem 1.5rem;
+      border-radius: var(--radius-md);
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn-secondary-glass:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    /* Candidate Official Identity & Number Card in Hero */
+    .candidate-id-card {
+      background: var(--brand-white);
+      color: var(--brand-navy);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35);
+      position: relative;
+      border: 3px solid rgba(63, 169, 245, 0.5);
+    }
+
+    .id-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px dashed rgba(13, 27, 42, 0.12);
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .id-card-title span {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--brand-primary);
+      font-weight: 800;
+    }
+
+    .id-card-title h2 {
+      font-size: 1.65rem;
+      font-weight: 900;
+      color: var(--brand-navy);
+      line-height: 1.25;
+    }
+
+    .id-card-subtitle {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #4A5568;
+      margin-top: 0.2rem;
+    }
+
+    .official-seal {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: var(--grad-main);
+      color: var(--brand-white);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      box-shadow: 0 6px 16px rgba(0, 86, 210, 0.25);
+    }
+
+    .numbers-showcase {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .number-tile {
+      border-radius: var(--radius-md);
+      padding: 1.15rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .number-tile.list-tile {
+      background: var(--brand-gray);
+      border: 2px solid rgba(0, 86, 210, 0.18);
+    }
+
+    .number-tile.candidate-tile {
+      background: var(--grad-main);
+      color: var(--brand-white);
+      box-shadow: 0 8px 20px rgba(0, 86, 210, 0.25);
+    }
+
+    .number-tile-label {
+      font-size: 0.85rem;
+      font-weight: 800;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .number-tile-value {
+      font-size: 2.75rem;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+    .id-credentials-mini {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.65rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .cred-chip {
+      background: var(--brand-gray);
+      padding: 0.55rem 0.75rem;
+      border-radius: 8px;
+      font-size: 0.83rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: var(--brand-navy);
+    }
+
+    .cred-chip svg {
+      color: var(--brand-primary);
+      flex-shrink: 0;
+    }
+
+    .id-ballot-instruction {
+      background: rgba(0, 179, 126, 0.1);
+      border: 1.5px solid var(--brand-green);
+      border-radius: var(--radius-md);
+      padding: 0.9rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: var(--brand-navy);
+    }
+
+    .check-box-demo {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background: var(--brand-green);
+      color: var(--brand-white);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    /* Quick Stats Strip */
+    .quick-strip {
+      margin-top: -2.25rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    .strip-grid {
+      background: var(--brand-white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      padding: 1.5rem 2rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      border: 1px solid rgba(13, 27, 42, 0.06);
+    }
+
+    .strip-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-left: 1px solid rgba(13, 27, 42, 0.08);
+      padding-left: 1rem;
+    }
+
+    .strip-item:last-child {
+      border-left: none;
+      padding-left: 0;
+    }
+
+    .strip-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background: rgba(0, 86, 210, 0.08);
+      color: var(--brand-primary);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .strip-text small {
+      display: block;
+      font-size: 0.78rem;
+      color: #5A6A85;
+      font-weight: 700;
+    }
+
+    .strip-text strong {
+      font-size: 1.05rem;
+      font-weight: 900;
+      color: var(--brand-navy);
+    }
+
+    /* Section Reusable Headers */
+    section {
+      padding: 5rem 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: rgba(0, 86, 210, 0.1);
+      color: var(--brand-primary);
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 0.35rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 0.85rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+      font-weight: 900;
+      color: var(--brand-navy);
+      line-height: 1.3;
+      margin-bottom: 0.85rem;
+    }
+
+    .section-desc {
+      font-size: 1.08rem;
+      color: #4A5568;
+      font-weight: 500;
+    }
+
+    /* Academic & Professional Background (CV) Section */
+    .cv-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .cv-card {
+      background: var(--brand-white);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-card);
+      border: 1px solid rgba(13, 27, 42, 0.06);
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cv-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 6px;
+      height: 100%;
+      background: var(--grad-main);
+    }
+
+    .cv-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--brand-sky);
+    }
+
+    .cv-icon-box {
+      width: 60px;
+      height: 60px;
+      border-radius: var(--radius-md);
+      background: var(--grad-main);
+      color: var(--brand-white);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      box-shadow: 0 8px 18px rgba(0, 86, 210, 0.2);
+    }
+
+    .cv-content {
+      flex: 1;
+    }
+
+    .cv-category {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--brand-primary);
+      background: rgba(0, 86, 210, 0.08);
+      padding: 0.2rem 0.65rem;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+
+    .cv-title {
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: var(--brand-navy);
+      margin-bottom: 0.4rem;
+    }
+
+    .cv-subtitle {
+      font-size: 0.98rem;
+      color: #4A5568;
+      font-weight: 500;
+    }
+
+    /* Core Campaign Mission & Legal Follow-up Workflow */
+    .mission-section {
+      background: var(--brand-navy);
+      color: var(--brand-white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mission-section .section-eyebrow {
+      background: rgba(63, 169, 245, 0.18);
+      color: var(--brand-sky);
+    }
+
+    .mission-section .section-title {
+      color: var(--brand-white);
+    }
+
+    .mission-section .section-desc {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .mission-statement-banner {
+      background: var(--grad-main);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      box-shadow: 0 16px 40px rgba(0, 86, 210, 0.35);
+      position: relative;
+      border: 2px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .mission-statement-banner blockquote {
+      font-size: clamp(1.35rem, 2.8vw, 2rem);
+      font-weight: 900;
+      line-height: 1.5;
+      max-width: 900px;
+      margin: 0 auto 1rem;
+    }
+
+    .mission-statement-banner cite {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.92);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(13, 27, 42, 0.35);
+      padding: 0.4rem 1.1rem;
+      border-radius: 999px;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .pillar-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      transition: transform 0.25s ease, background 0.25s ease;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.09);
+      border-color: var(--brand-sky);
+    }
+
+    .pillar-step {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--brand-orange);
+      color: var(--brand-navy);
+      font-weight: 900;
+      font-size: 1.2rem;
+      display: grid;
+      place-items: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .pillar-card h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 0.65rem;
+      color: var(--brand-white);
+    }
+
+    .pillar-card p {
+      font-size: 0.98rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* Interactive Ballot Simulator Section */
+    .ballot-section {
+      background: var(--brand-white);
+    }
+
+    .ballot-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .voting-guide-box {
+      background: var(--brand-gray);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      border: 2px solid rgba(0, 86, 210, 0.12);
+    }
+
+    .exact-instruction-quote {
+      background: var(--brand-navy);
+      color: var(--brand-white);
+      padding: 1.35rem 1.5rem;
+      border-radius: var(--radius-md);
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin: 1.25rem 0 1.75rem;
+      border-right: 5px solid var(--brand-orange);
+      line-height: 1.6;
+    }
+
+    .step-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .step-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      font-weight: 700;
+      color: var(--brand-navy);
+    }
+
+    .step-badge {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--brand-primary);
+      color: var(--brand-white);
+      display: grid;
+      place-items: center;
+      font-size: 0.85rem;
+      font-weight: 900;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+
+    /* Interactive Paper Ballot Card */
+    .ballot-paper {
+      background: #FCFDFE;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 20px 45px rgba(13, 27, 42, 0.14);
+      border: 2px solid #D8E2EF;
+      overflow: hidden;
+    }
+
+    .ballot-paper-header {
+      background: var(--grad-dark);
+      color: var(--brand-white);
+      padding: 1.5rem;
+      text-align: center;
+      border-bottom: 4px solid var(--brand-orange);
+    }
+
+    .ballot-paper-header small {
+      display: block;
+      font-size: 0.82rem;
+      opacity: 0.9;
+      font-weight: 700;
+    }
+
+    .ballot-paper-header h3 {
+      font-size: 1.35rem;
+      font-weight: 900;
+      margin: 0.25rem 0;
+    }
+
+    .ballot-list-number-banner {
+      display: inline-block;
+      background: var(--brand-white);
+      color: var(--brand-navy);
+      font-weight: 900;
+      font-size: 1rem;
+      padding: 0.3rem 1.2rem;
+      border-radius: 999px;
+      margin-top: 0.5rem;
+    }
+
+    .ballot-rows {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .ballot-row-ghost {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      background: #F1F5F9;
+      border-radius: 10px;
+      opacity: 0.55;
+      user-select: none;
+    }
+
+    .ghost-bar {
+      height: 12px;
+      width: 140px;
+      background: #CBD5E1;
+      border-radius: 6px;
+    }
+
+    .ghost-box {
+      width: 30px;
+      height: 30px;
+      border: 2px solid #94A3B8;
+      border-radius: 6px;
+    }
+
+    .ballot-row-target {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.15rem 1.25rem;
+      background: rgba(0, 86, 210, 0.06);
+      border: 2.5px solid var(--brand-primary);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+
+    .ballot-row-target:hover {
+      background: rgba(0, 86, 210, 0.1);
+      transform: scale(1.01);
+    }
+
+    .ballot-row-target.voted {
+      background: rgba(0, 179, 126, 0.12);
+      border-color: var(--brand-green);
+      box-shadow: 0 8px 24px rgba(0, 179, 126, 0.2);
+    }
+
+    .target-right {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .target-num {
+      width: 46px;
+      height: 46px;
+      border-radius: 10px;
+      background: var(--brand-primary);
+      color: var(--brand-white);
+      font-weight: 900;
+      font-size: 1.35rem;
+      display: grid;
+      place-items: center;
+      transition: background 0.25s ease;
+    }
+
+    .ballot-row-target.voted .target-num {
+      background: var(--brand-green);
+    }
+
+    .target-info strong {
+      display: block;
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--brand-navy);
+    }
+
+    .target-info span {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--brand-primary);
+    }
+
+    .ballot-checkbox {
+      width: 48px;
+      height: 48px;
+      border: 3px solid var(--brand-navy);
+      border-radius: 10px;
+      background: var(--brand-white);
+      display: grid;
+      place-items: center;
+      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+    }
+
+    .ballot-row-target.voted .ballot-checkbox {
+      background: var(--brand-green);
+      border-color: var(--brand-green);
+      color: var(--brand-white);
+      transform: scale(1.08);
+    }
+
+    .ballot-checkbox svg {
+      opacity: 0;
+      transform: scale(0.4);
+      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .ballot-row-target.voted .ballot-checkbox svg {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .ballot-feedback {
+      margin: 0 1.5rem 1.5rem;
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius-md);
+      background: var(--brand-gray);
+      text-align: center;
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: var(--brand-navy);
+      transition: all 0.3s ease;
+    }
+
+    .ballot-feedback.active {
+      background: var(--brand-green);
+      color: var(--brand-white);
+    }
+
+    /* Citizen Voice Interactive Section */
+    .voice-section {
+      background: var(--brand-gray);
+    }
+
+    .voice-card {
+      background: var(--brand-white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      padding: 2.5rem;
+      max-width: 820px;
+      margin: 0 auto;
+      border: 1px solid rgba(13, 27, 42, 0.08);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      font-weight: 800;
+      font-size: 0.92rem;
+      color: var(--brand-navy);
+    }
+
+    .form-control {
+      font-family: inherit;
+      font-size: 0.98rem;
+      padding: 0.85rem 1rem;
+      border-radius: var(--radius-md);
+      border: 1.5px solid #CBD5E1;
+      background: var(--brand-gray);
+      color: var(--brand-navy);
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--brand-primary);
+      background: var(--brand-white);
+      box-shadow: 0 0 0 3px rgba(0, 86, 210, 0.15);
+    }
+
+    .btn-submit-voice {
+      width: 100%;
+      background: var(--grad-main);
+      color: var(--brand-white);
+      font-weight: 900;
+      font-size: 1.05rem;
+      padding: 1rem;
+      border-radius: var(--radius-md);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      box-shadow: 0 8px 20px rgba(0, 86, 210, 0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-submit-voice:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(0, 86, 210, 0.35);
+    }
+
+    .voice-response {
+      display: none;
+      margin-top: 1.25rem;
+      padding: 1.15rem;
+      border-radius: var(--radius-md);
+      background: rgba(0, 179, 126, 0.12);
+      border: 1.5px solid var(--brand-green);
+      color: var(--brand-navy);
+      font-weight: 800;
+      text-align: center;
+    }
+
+    /* Footer & Social Handle */
+    .site-footer {
+      background: var(--brand-navy);
+      color: var(--brand-white);
+      padding: 4rem 0 2rem;
+      border-top: 4px solid var(--brand-primary);
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-social-box {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(63, 169, 245, 0.3);
+      padding: 1rem 1.5rem;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .social-handle-badge {
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: var(--brand-white);
+      direction: ltr;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .copy-handle-btn {
+      background: var(--brand-primary);
+      color: var(--brand-white);
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 0.5rem 0.95rem;
+      border-radius: 8px;
+      transition: background 0.2s ease;
+    }
+
+    .copy-handle-btn:hover {
+      background: var(--brand-sky);
+      color: var(--brand-navy);
+    }
+
+    .footer-bottom {
+      padding-top: 1.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 992px) {
+      .hero-grid,
+      .ballot-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .strip-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .strip-item:nth-child(2) {
+        border-left: none;
+      }
+
+      .pillars-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 78px;
+        right: 0;
+        left: 0;
+        background: var(--brand-white);
+        flex-direction: column;
+        padding: 1.5rem;
+        box-shadow: var(--shadow-card);
+        border-bottom: 2px solid var(--brand-primary);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .mobile-menu-btn {
+        display: inline-flex;
+      }
+
+      .cv-grid,
+      .form-grid,
+      .strip-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .strip-item {
+        border-left: none;
+        border-bottom: 1px solid rgba(13, 27, 42, 0.08);
+        padding-bottom: 0.85rem;
+        padding-left: 0;
+      }
+
+      .strip-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+  </style>
+</head>
+<body class="bg-pattern">
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Top Election Info Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-tag">
+        <span class="top-bar-dot"></span>
+        <span>انتخابات المجلس الشعبي الولائي لولاية البليدة (APW Blida)</span>
+      </div>
+      <div class="top-bar-numbers">
+        <span>جبهة الجزائر الجديدة</span>
+        <span class="pill-badge list">رقم القائمة: 13</span>
+        <span class="pill-badge candidate">رقم المترشحة: 46</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Sticky Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrapper">
+      <a href="#top" class="brand-logo" aria-label="عيظ دنيا - الصفحة الرئيسية">
+        <div class="brand-monogram">
+          46
+          <span>13</span>
+        </div>
+        <div class="brand-title">
+          <strong>عيظ دنيا · Aidh Dounia</strong>
+          <small>المجلس الشعبي الولائي لولاية البليدة</small>
+        </div>
+      </a>
+
+      <nav aria-label="التنقل الرئيسي">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">المسار العلمي والمهني</a></li>
+          <li><a href="#mission">الرسالة والالتزام</a></li>
+          <li><a href="#how-to-vote">كيفية التصويت</a></li>
+          <li><a href="#citizen-voice">صوت المواطن</a></li>
+        </ul>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <a href="#how-to-vote" class="nav-cta">
+          <span>اشطب رقم 46</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="فتح القائمة">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="top">
+    <div class="hero-watermark" aria-hidden="true">46</div>
+    <div class="container hero-grid">
+      <!-- Right Column: Campaign Pitch -->
+      <div class="hero-content">
+        <div class="party-ribbon">
+          <span class="party-ribbon-badge">القائمة رقم 13</span>
+          <span class="party-ribbon-text">جبهة الجزائر الجديدة (New Algeria Front)</span>
+        </div>
+
+        <h1 class="hero-title">
+          الأستاذة <span class="highlight-name">عيظ دنيا</span><br />
+          صوتكم القانوني في المجلس الشعبي الولائي
+        </h1>
+
+        <p class="hero-subtitle">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3FA9F5" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>مترشحة المجلس الشعبي الولائي لولاية البليدة (APW Blida)</span>
+        </p>
+
+        <div class="mission-quote-box">
+          <div class="mission-quote-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>الالتزام الأساسي للحملة</span>
+          </div>
+          <p class="mission-quote-text">
+            "توصيل صوت الشعب للجهات المعنية والحرص على إيجاد جواب مقنع وتغيير إن أمكن"
+          </p>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#how-to-vote" class="btn-primary-orange">
+            <span>جرب محاكاة ورقة التصويت (رقم 46)</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+          </a>
+          <a href="#citizen-voice" class="btn-secondary-glass">
+            <span>أرسل انشغالك مباشرة</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Left Column: Official Candidate Identity Card -->
+      <div class="candidate-id-card" aria-label="بطاقة المترشحة الرسمية">
+        <div class="id-card-header">
+          <div class="id-card-title">
+            <span>بطاقة التعريف الانتخابية · ولاية البليدة</span>
+            <h2>عيظ دنيا (Aidh Dounia)</h2>
+            <p class="id-card-subtitle">جبهة الجزائر الجديدة — المجلس الشعبي الولائي</p>
+          </div>
+          <div class="official-seal" title="كفاءة قانونية وتربوية">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
+          </div>
+        </div>
+
+        <div class="numbers-showcase">
+          <div class="number-tile list-tile">
+            <span class="number-tile-label">رقم القائمة</span>
+            <span class="number-tile-value" style="color: var(--brand-primary);">13</span>
+          </div>
+          <div class="number-tile candidate-tile">
+            <span class="number-tile-label">رقم المترشحة</span>
+            <span class="number-tile-value">46</span>
+          </div>
+        </div>
+
+        <div class="id-credentials-mini">
+          <div class="cred-chip">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            <span>ليسانس حقوق</span>
+          </div>
+          <div class="cred-chip">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+            <span>بكالوريا آداب وفلسفة</span>
+          </div>
+          <div class="cred-chip">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            <span>أستاذة سابقة</span>
+          </div>
+          <div class="cred-chip">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            <span>مساعدة في مكتب محاماة</span>
+          </div>
+        </div>
+
+        <div class="id-ballot-instruction">
+          <div class="check-box-demo">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <span>إذا حبيت تختارني اشطب داخل المربع اللي قدام اسمي (رقم 46 في القائمة رقم 13)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Facts Strip -->
+  <div class="container quick-strip">
+    <div class="strip-grid">
+      <div class="strip-item">
+        <div class="strip-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="strip-text">
+          <small>المترشحة</small>
+          <strong>عيظ دنيا (Aidh Dounia)</strong>
+        </div>
+      </div>
+      <div class="strip-item">
+        <div class="strip-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 9h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg>
+        </div>
+        <div class="strip-text">
+          <small>الاستحقاق الانتخابي</small>
+          <strong>المجلس الشعبي الولائي - البليدة</strong>
+        </div>
+      </div>
+      <div class="strip-item">
+        <div class="strip-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+        </div>
+        <div class="strip-text">
+          <small>الانتماء السياسي</small>
+          <strong>جبهة الجزائر الجديدة (قائمة 13)</strong>
+        </div>
+      </div>
+      <div class="strip-item">
+        <div class="strip-icon" style="background: rgba(255, 140, 66, 0.15); color: var(--brand-orange);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <div class="strip-text">
+          <small>الترتيب في القائمة</small>
+          <strong>المترشحة رقم 46</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Academic & Professional Background (CV) Section -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">الكفاءة العلمية والمهنية</span>
+        <h2 class="section-title">مسار يجمع بين القانون، الفكر، والتربية</h2>
+        <p class="section-desc">
+          تكوين أكاديمي قانوني وخبرة ميدانية في التعليم والممارسة القانونية لتمثيل مواطني ولاية البليدة بوعي ومسؤولية داخل المجلس الشعبي الولائي.
+        </p>
+      </div>
+
+      <div class="cv-grid">
+        <!-- Credential 1 -->
+        <article class="cv-card">
+          <div class="cv-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
+          </div>
+          <div class="cv-content">
+            <span class="cv-category">التكوين الجامعي</span>
+            <h3 class="cv-title">ليسانس حقوق (Bachelor's Degree in Law)</h3>
+            <p class="cv-subtitle">
+              إلمام دقيق بالقوانين والتشريعات والإجراءات الإدارية لمتابعة ملفات المواطنين عبر القنوات المؤسساتية السليمة.
+            </p>
+          </div>
+        </article>
+
+        <!-- Credential 2 -->
+        <article class="cv-card">
+          <div class="cv-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <div class="cv-content">
+            <span class="cv-category">الممارسة المهنية القانونية</span>
+            <h3 class="cv-title">مساعدة في مكتب محاماة (Legal Assistant)</h3>
+            <p class="cv-subtitle">
+              خبرة عملية يومية في صياغة العرائض، متابعة القضايا والملفات القانونية، والتواصل الفعال مع الهيئات القضائية والإدارية.
+            </p>
+          </div>
+        </article>
+
+        <!-- Credential 3 -->
+        <article class="cv-card">
+          <div class="cv-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <div class="cv-content">
+            <span class="cv-category">الخبرة التربوية والمجتمعية</span>
+            <h3 class="cv-title">أستاذة سابقة (Former Teacher)</h3>
+            <p class="cv-subtitle">
+              قرب مباشر من انشغالات الأسرة التربوية والشباب في ولاية البليدة، وقدرة عالية على الإصغاء والتواصل البناء.
+            </p>
+          </div>
+        </article>
+
+        <!-- Credential 4 -->
+        <article class="cv-card">
+          <div class="cv-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div class="cv-content">
+            <span class="cv-category">القاعدة المعرفية والأدبية</span>
+            <h3 class="cv-title">بكالوريا آداب وفلسفة (Baccalaureate in Literature &amp; Philosophy)</h3>
+            <p class="cv-subtitle">
+              تكوين فكري وإنساني يعزز روح النقد البناء، الحجة المنطقية، والدفاع عن قضايا الصالح العام.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Campaign Mission Section -->
+  <section class="mission-section" id="mission">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">الرؤية والمنهجية</span>
+        <h2 class="section-title">رسالة واضحة.. التزام صريح بدون وعود زائفة</h2>
+        <p class="section-desc">
+          التمثيل الحقيقي في المجلس الشعبي الولائي يبدأ من الاستماع للمواطن وتحويل انشغاله إلى ملف قانوني يتابع بجدية.
+        </p>
+      </div>
+
+      <div class="mission-statement-banner">
+        <blockquote>
+          « توصيل صوت الشعب للجهات المعنية والحرص على إيجاد جواب مقنع وتغيير إن أمكن »
+        </blockquote>
+        <cite>
+          <span>عيظ دنيا (Aidh Dounia) — المترشحة رقم 46 في القائمة رقم 13</span>
+        </cite>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-step">01</div>
+          <h3>توصيل صوت الشعب للجهات المعنية</h3>
+          <p>
+            استقبال انشغالات مواطني بلديات ولاية البليدة ورفعها بصفة رسمية وموثقة إلى السلطات الولائية والمديريات التنفيذية المختصة.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-step">02</div>
+          <h3>الحرص على إيجاد جواب مقنع</h3>
+          <p>
+            عدم الاكتفاء بطرح الانشغال فقط، بل المتابعة القانونية والإدارية المستمرة للحصول على رد واضح ومبرر يحترم كرامة المواطن وحقه في المعلومة.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-step">03</div>
+          <h3>تحقيق التغيير إن أمكن</h3>
+          <p>
+            توظيف الصلاحيات الرقابية والتداولية للمجلس الشعبي الولائي للدفع نحو حلول عملية وميدانية ملموسة في التنمية المحلية والخدمات العمومية.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Voting Guide & Ballot Simulator -->
+  <section class="ballot-section" id="how-to-vote">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">دليل الناخب البليدي</span>
+        <h2 class="section-title">كيف تختار المترشحة عيظ دنيا يوم الاقتراع؟</h2>
+        <p class="section-desc">
+          خطوة بسيطة داخل معزل التصويت تضمن وصول صوتك إلى المجلس الشعبي الولائي لولاية البليدة.
+        </p>
+      </div>
+
+      <div class="ballot-layout">
+        <!-- Right Column: Instructions -->
+        <div class="voting-guide-box">
+          <span class="pill-badge list" style="background: rgba(0,86,210,0.1); color: var(--brand-primary); border-color: rgba(0,86,210,0.25);">تعليمة التصويت المباشرة</span>
+          <div class="exact-instruction-quote">
+            "إذا حبيت تختارني اشطب داخل المربع اللي قدام اسمي (رقم 46 في القائمة رقم 13)"
+          </div>
+
+          <ul class="step-list">
+            <li>
+              <span class="step-badge">1</span>
+              <span>اسحب ورقة التصويت الخاصة بانتخابات <strong>المجلس الشعبي الولائي لولاية البليدة</strong>، وابحث عن <strong>القائمة رقم 13 (جبهة الجزائر الجديدة)</strong>.</span>
+            </li>
+            <li>
+              <span class="step-badge">2</span>
+              <span>اتجه مباشرة إلى السطر الخاص بالمترشحة <strong>عيظ دنيا</strong> الحاملة للرقم <strong>46</strong>.</span>
+            </li>
+            <li>
+              <span class="step-badge">3</span>
+              <span>ضع علامة الشطب أو الاختيار (<strong>✓</strong> أو <strong>✗</strong>) بوضوح <strong>داخل المربع الموجود أمام الاسم والرقم 46</strong>.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Left Column: Interactive Ballot Simulator -->
+        <div class="ballot-paper" aria-label="محاكاة تفاعلية لورقة التصويت">
+          <div class="ballot-paper-header">
+            <small>المجلس الشعبي الولائي لولاية البليدة (APW Blida)</small>
+            <h3>جبهة الجزائر الجديدة</h3>
+            <span class="ballot-list-number-banner">القائمة رقم 13</span>
+          </div>
+
+          <div class="ballot-rows">
+            <div class="ballot-row-ghost" aria-hidden="true">
+              <div style="display:flex; align-items:center; gap:0.75rem;">
+                <strong style="color:#64748B;">45</strong>
+                <div class="ghost-bar"></div>
+              </div>
+              <div class="ghost-box"></div>
+            </div>
+
+            <!-- Interactive Target Row #46 -->
+            <div class="ballot-row-target voted" id="ballotRow46" role="button" tabindex="0" aria-pressed="true" aria-label="اشطب داخل المربع أمام عيظ دنيا رقم 46">
+              <div class="target-right">
+                <div class="target-num">46</div>
+                <div class="target-info">
+                  <strong>عيظ دنيا (Aidh Dounia)</strong>
+                  <span>ليسانس حقوق · القائمة رقم 13</span>
+                </div>
+              </div>
+              <div class="ballot-checkbox" id="ballotCheckbox46">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+            </div>
+
+            <div class="ballot-row-ghost" aria-hidden="true">
+              <div style="display:flex; align-items:center; gap:0.75rem;">
+                <strong style="color:#64748B;">47</strong>
+                <div class="ghost-bar"></div>
+              </div>
+              <div class="ghost-box"></div>
+            </div>
+          </div>
+
+          <div class="ballot-feedback active" id="ballotFeedback">
+            ✓ تم التأشير بنجاح داخل المربع أمام الاسم (رقم 46 في القائمة رقم 13) — انقر على السطر للتجربة!
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Citizen Voice Interactive Form -->
+  <section class="voice-section" id="citizen-voice">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">تواصل مباشر مع المترشحة</span>
+        <h2 class="section-title">بلّغ صوتك أو انشغالك في ولاية البليدة</h2>
+        <p class="section-desc">
+          تطبيقاً لشعار الحملة «توصيل صوت الشعب للجهات المعنية والحرص على إيجاد جواب مقنع وتغيير إن أمكن»، شاركنا اقتراحك أو انشغال بلديتك.
+        </p>
+      </div>
+
+      <div class="voice-card">
+        <form id="citizenVoiceForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="citizenName">الاسم الكامل (اختياري)</label>
+              <input type="text" id="citizenName" class="form-control" placeholder="مثال: محمد أمين" />
+            </div>
+
+            <div class="form-group">
+              <label for="citizenMunicipality">البلدية في ولاية البليدة</label>
+              <select id="citizenMunicipality" class="form-control" required>
+                <option value="">اختر البلدية...</option>
+                <option value="البليدة">البليدة</option>
+                <option value="بوفاريك">بوفاريك</option>
+                <option value="أولاد يعيش">أولاد يعيش</option>
+                <option value="الأربعاء">الأربعاء</option>
+                <option value="موزاية">موزاية</option>
+                <option value="العفرون">العفرون</option>
+                <option value="بني مراد">بني مراد</option>
+                <option value="بوعينان">بوعينان</option>
+                <option value="مفتاح">مفتاح</option>
+                <option value="بلدية أخرى في ولاية البليدة">بلدية أخرى في ولاية البليدة</option>
+              </select>
+            </div>
+
+            <div class="form-group full">
+              <label for="citizenMessage">موضوع الانشغال أو الاقتراح</label>
+              <textarea id="citizenMessage" rows="4" class="form-control" placeholder="اكتب انشغالك أو رسالتك ليتم أخذها بعين الاعتبار ومتابعتها مع الجهات المعنية..." required></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit-voice">
+            <span>تسجيل الانشغال وتأكيد المساندة (القائمة 13 - رقم 46)</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </button>
+
+          <div class="voice-response" id="voiceResponse" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <h3 style="font-size: 1.45rem; font-weight: 900; margin-bottom: 0.35rem;">
+            عيظ دنيا (Aidh Dounia)
+          </h3>
+          <p style="color: rgba(255,255,255,0.8); font-weight: 600;">
+            مترشحة المجلس الشعبي الولائي لولاية البليدة · جبهة الجزائر الجديدة · القائمة رقم 13 · المترشحة رقم 46
+          </p>
+        </div>
+
+        <div class="footer-social-box">
+          <div>
+            <small style="display:block; color: var(--brand-sky); font-weight: 700; font-size: 0.78rem;">الحساب الرسمي على مواقع التواصل</small>
+            <span class="social-handle-badge" id="socialHandleText">Aidh Dounia ❤️</span>
+          </div>
+          <button type="button" class="copy-handle-btn" id="copyHandleBtn">نسخ الاسم</button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>جميع الحقوق محفوظة © الحملة الانتخابية للمترشحة عيظ دنيا — ولاية البليدة</span>
+        <span>القائمة رقم 13 (جبهة الجزائر الجديدة) | المترشحة رقم 46</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 1. Scroll Progress & Sticky Header Shadow
+    const scrollProgress = document.getElementById('scrollProgress');
+    const siteHeader = document.getElementById('siteHeader');
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      scrollProgress.style.width = pct + '%';
+
+      if (scrollTop > 20) {
+        siteHeader.classList.add('scrolled');
+      } else {
+        siteHeader.classList.remove('scrolled');
+      }
+    });
+
+    // 2. Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+      });
+    });
+
+    // 3. Interactive Ballot Simulator (Candidate #46 in List #13)
+    const ballotRow46 = document.getElementById('ballotRow46');
+    const ballotFeedback = document.getElementById('ballotFeedback');
+
+    function toggleVoteSimulation() {
+      const isVoted = ballotRow46.classList.toggle('voted');
+      ballotRow46.setAttribute('aria-pressed', String(isVoted));
+
+      if (isVoted) {
+        ballotFeedback.classList.add('active');
+        ballotFeedback.textContent = '✓ أحسنت! تم الشطب داخل المربع قدام اسم عيظ دنيا (رقم 46 في القائمة رقم 13).';
+      } else {
+        ballotFeedback.classList.remove('active');
+        ballotFeedback.textContent = 'انقر داخل المربع اللي قدام اسم عيظ دنيا (رقم 46 في القائمة رقم 13) لتأكيد اختيارك.';
+      }
+    }
+
+    ballotRow46.addEventListener('click', toggleVoteSimulation);
+    ballotRow46.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleVoteSimulation();
+      }
+    });
+
+    // 4. Citizen Voice Form Submission
+    const citizenVoiceForm = document.getElementById('citizenVoiceForm');
+    const voiceResponse = document.getElementById('voiceResponse');
+
+    citizenVoiceForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('citizenName').value.trim() || 'مواطن(ة) من البليدة';
+      const municipality = document.getElementById('citizenMunicipality').value;
+      voiceResponse.style.display = 'block';
+      voiceResponse.textContent = `شكراً لك ${name} من بلدية (${municipality}). تم تسجيل رسالتك في سجل المتابعة، وسنحرص على توصيل صوتك للجهات المعنية وإيجاد جواب مقنع وتغيير إن أمكن. موعدنا مع القائمة 13، المترشحة رقم 46!`;
+      citizenVoiceForm.reset();
+    });
+
+    // 5. Copy Social Media Handle Button
+    const copyHandleBtn = document.getElementById('copyHandleBtn');
+    copyHandleBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText('Aidh Dounia ❤️').then(() => {
+        const originalText = copyHandleBtn.textContent;
+        copyHandleBtn.textContent = 'تم النسخ ✓';
+        copyHandleBtn.style.background = 'var(--brand-green)';
+        setTimeout(() => {
+          copyHandleBtn.textContent = originalText;
+          copyHandleBtn.style.background = '';
+        }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>
