@@ -1737,12 +1737,17 @@
           <div class="form-grid">
             <div class="form-group">
               <label for="citizenName">الاسم الكامل (اختياري)</label>
-              <input type="text" id="citizenName" class="form-control" placeholder="مثال: محمد أمين" />
+              <input type="text" id="citizenName" name="name" class="form-control" placeholder="مثال: محمد أمين" />
             </div>
 
             <div class="form-group">
+              <label for="citizenPhone">رقم الهاتف أو البريد للتواصل (اختياري)</label>
+              <input type="tel" id="citizenPhone" name="phone" class="form-control" placeholder="مثال: 0550000000" dir="ltr" style="text-align: right;" />
+            </div>
+
+            <div class="form-group full">
               <label for="citizenMunicipality">البلدية في ولاية البليدة</label>
-              <select id="citizenMunicipality" class="form-control" required>
+              <select id="citizenMunicipality" name="municipality" class="form-control" required>
                 <option value="">اختر البلدية...</option>
                 <option value="البليدة">البليدة</option>
                 <option value="بوفاريك">بوفاريك</option>
@@ -1753,18 +1758,26 @@
                 <option value="بني مراد">بني مراد</option>
                 <option value="بوعينان">بوعينان</option>
                 <option value="مفتاح">مفتاح</option>
+                <option value="شبلي">شبلي</option>
+                <option value="وادي العلايق">وادي العلايق</option>
+                <option value="بني تامو">بني تامو</option>
+                <option value="الصومعة">الصومعة</option>
+                <option value="قرواو">قرواو</option>
+                <option value="بوقرة">بوقرة</option>
+                <option value="حمام ملوان">حمام ملوان</option>
+                <option value="الشريعة">الشريعة</option>
                 <option value="بلدية أخرى في ولاية البليدة">بلدية أخرى في ولاية البليدة</option>
               </select>
             </div>
 
             <div class="form-group full">
               <label for="citizenMessage">موضوع الانشغال أو الاقتراح</label>
-              <textarea id="citizenMessage" rows="4" class="form-control" placeholder="اكتب انشغالك أو رسالتك ليتم أخذها بعين الاعتبار ومتابعتها مع الجهات المعنية..." required></textarea>
+              <textarea id="citizenMessage" name="message" rows="4" class="form-control" placeholder="اكتب انشغالك أو رسالتك ليتم أخذها بعين الاعتبار ومتابعتها مع الجهات المعنية..." required></textarea>
             </div>
           </div>
 
-          <button type="submit" class="btn-submit-voice">
-            <span>تسجيل الانشغال وتأكيد المساندة (القائمة 13 - رقم 46)</span>
+          <button type="submit" class="btn-submit-voice" id="submitVoiceBtn">
+            <span id="submitVoiceBtnText">تسجيل الانشغال وتأكيد المساندة (القائمة 13 - رقم 46)</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
           </button>
 
@@ -1860,17 +1873,70 @@
       }
     });
 
-    // 4. Citizen Voice Form Submission
+    // 4. Citizen Voice Form Submission -> Google Sheets (Apps Script Web App)
+    // Paste your deployed Google Apps Script Web App URL inside GOOGLE_SHEETS_WEBAPP_URL below:
+    const GOOGLE_SHEETS_WEBAPP_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEBAPP_URL_HERE';
+
     const citizenVoiceForm = document.getElementById('citizenVoiceForm');
     const voiceResponse = document.getElementById('voiceResponse');
+    const submitVoiceBtn = document.getElementById('submitVoiceBtn');
+    const submitVoiceBtnText = document.getElementById('submitVoiceBtnText');
 
-    citizenVoiceForm.addEventListener('submit', (e) => {
+    citizenVoiceForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const name = document.getElementById('citizenName').value.trim() || 'مواطن(ة) من البليدة';
+      const phone = document.getElementById('citizenPhone').value.trim() || 'غير محدد';
       const municipality = document.getElementById('citizenMunicipality').value;
-      voiceResponse.style.display = 'block';
-      voiceResponse.textContent = `شكراً لك ${name} من بلدية (${municipality}). تم تسجيل رسالتك في سجل المتابعة، وسنحرص على توصيل صوتك للجهات المعنية وإيجاد جواب مقنع وتغيير إن أمكن. موعدنا مع القائمة 13، المترشحة رقم 46!`;
-      citizenVoiceForm.reset();
+      const message = document.getElementById('citizenMessage').value.trim();
+
+      const payload = {
+        timestamp: new Date().toLocaleString('ar-DZ'),
+        name,
+        phone,
+        municipality,
+        message,
+        candidate: 'عيظ دنيا (رقم 46 - القائمة 13)'
+      };
+
+      const originalBtnLabel = submitVoiceBtnText.textContent;
+      submitVoiceBtn.disabled = true;
+      submitVoiceBtn.style.opacity = '0.75';
+      submitVoiceBtnText.textContent = 'جاري إرسال الانشغال إلى سجل المتابعة...';
+      voiceResponse.style.display = 'none';
+
+      try {
+        if (
+          GOOGLE_SHEETS_WEBAPP_URL &&
+          GOOGLE_SHEETS_WEBAPP_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_WEBAPP_URL_HERE'
+        ) {
+          const formData = new URLSearchParams();
+          Object.entries(payload).forEach(([key, val]) => formData.append(key, val));
+
+          await fetch(GOOGLE_SHEETS_WEBAPP_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+            },
+            body: formData.toString()
+          });
+        }
+
+        voiceResponse.style.display = 'block';
+        voiceResponse.style.background = 'rgba(0, 179, 126, 0.12)';
+        voiceResponse.style.borderColor = 'var(--brand-green)';
+        voiceResponse.textContent = `شكراً لك ${name} من بلدية (${municipality}). تم تسجيل رسالتك بنجاح في جدول المتابعة (Google Sheets)، وسنحرص على توصيل صوتك للجهات المعنية وإيجاد جواب مقنع وتغيير إن أمكن. موعدنا مع القائمة 13، المترشحة رقم 46!`;
+        citizenVoiceForm.reset();
+      } catch (err) {
+        voiceResponse.style.display = 'block';
+        voiceResponse.style.background = 'rgba(255, 140, 66, 0.15)';
+        voiceResponse.style.borderColor = 'var(--brand-orange)';
+        voiceResponse.textContent = 'حدث خطأ أثناء الإرسال، يرجى المحاولة مرة أخرى أو التواصل عبر الحساب الرسمي Aidh Dounia ❤️.';
+      } finally {
+        submitVoiceBtn.disabled = false;
+        submitVoiceBtn.style.opacity = '1';
+        submitVoiceBtnText.textContent = originalBtnLabel;
+      }
     });
 
     // 5. Copy Social Media Handle Button
