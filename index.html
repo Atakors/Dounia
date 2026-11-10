@@ -55,14 +55,13 @@
       content: '';
       position: fixed;
       inset: 0;
-      background-image: url('poster.jpg');
+      background-image: url('./poster.jpg?v=2');
       background-size: cover;
       background-position: center top;
       background-repeat: no-repeat;
-      opacity: 0.08;
+      opacity: 0.22;
       pointer-events: none;
       z-index: 0;
-      filter: saturate(1.1);
     }
 
     header, section, footer {
@@ -158,11 +157,10 @@
       content: '';
       position: absolute;
       inset: 0;
-      background-image: url('poster.jpg');
+      background-image: url('./poster.jpg?v=2');
       background-size: cover;
       background-position: center;
-      opacity: 0.14;
-      mix-blend-mode: luminosity;
+      opacity: 0.28;
       pointer-events: none;
     }
 
@@ -170,7 +168,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(13, 27, 42, 0.92) 0%, rgba(0, 86, 210, 0.82) 100%);
+      background: linear-gradient(135deg, rgba(13, 27, 42, 0.85) 0%, rgba(0, 86, 210, 0.72) 100%);
       pointer-events: none;
     }
 
@@ -327,10 +325,10 @@
     }
 
     .id-portrait-wrap {
-      width: 165px;
-      height: 165px;
+      width: 210px;
+      height: 235px;
       margin: 0 auto 1rem;
-      border-radius: 50%;
+      border-radius: var(--radius-lg);
       padding: 5px;
       background: var(--grad-main);
       box-shadow: 0 12px 28px rgba(0, 86, 210, 0.25);
@@ -341,7 +339,7 @@
       height: 100%;
       object-fit: cover;
       object-position: center top;
-      border-radius: 50%;
+      border-radius: calc(var(--radius-lg) - 4px);
       background: var(--brand-white);
       display: block;
     }
@@ -741,7 +739,7 @@
         <span class="id-card-eyebrow">بطاقة التعريف الانتخابية · ولاية البليدة</span>
 
         <div class="id-portrait-wrap">
-          <img src="portrait.jpg" alt="الصورة الرسمية للمترشحة عيظ دنيا (Aidh Dounia)" />
+          <img src="./portrait.jpg?v=2" alt="الصورة الرسمية للمترشحة عيظ دنيا (Aidh Dounia)" />
         </div>
 
         <h2 class="id-card-name">عيظ دنيا (Aidh Dounia)</h2>
