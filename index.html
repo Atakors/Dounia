@@ -16,18 +16,19 @@
 
   <style>
     :root {
-      --brand-primary: #0056D2;       /* Primary Blue - Brand Core */
-      --brand-navy: #0D1B2A;          /* Deep Navy - Contrast & Dark Backgrounds */
-      --brand-sky: #3FA9F5;           /* Light Sky Blue - Secondary Highlight */
+      --brand-primary: #0B6E4F;       /* Algerian Emerald Green - Brand Core */
+      --brand-navy: #072A20;          /* Deep Forest Pine - Contrast & Dark Backgrounds */
+      --brand-sky: #10B981;           /* Vibrant Mint Emerald - Secondary Highlight */
       --brand-white: #FFFFFF;         /* Neutral White - Text Contrast & Surface */
-      --brand-gray: #F5F7FA;          /* Soft Gray - Interface & Card Backgrounds */
-      --brand-orange: #FF8C42;        /* Accent Orange - Energy & Callouts */
-      --brand-green: #00B37E;         /* Success Green - Validation & Positive Actions */
-      --grad-main: linear-gradient(135deg, #0056D2, #3FA9F5);
-      --grad-dark: linear-gradient(135deg, #0D1B2A, #0056D2);
+      --brand-gray: #F4F9F6;          /* Soft Sage Tint - Interface & Card Backgrounds */
+      --brand-orange: #D90429;        /* Ballot Crimson Red - Energy & Callouts */
+      --brand-gold: #F59E0B;          /* Warm Gold - Poster Borders & Highlights */
+      --brand-green: #059669;         /* Success Emerald - Validation & Positive Actions */
+      --grad-main: linear-gradient(135deg, #0B6E4F, #10B981);
+      --grad-dark: linear-gradient(135deg, #072A20, #0B6E4F);
       --radius-md: 12px;
       --radius-lg: 16px;
-      --shadow-card: 0 4px 20px rgba(13, 27, 42, 0.08);
+      --shadow-card: 0 4px 20px rgba(7, 42, 32, 0.09);
     }
 
     *, *::before, *::after {
@@ -119,7 +120,8 @@
       font-size: 1.1rem;
       padding: 0.25rem 0.85rem;
       border-radius: var(--radius-md);
-      box-shadow: 0 4px 12px rgba(0, 86, 210, 0.25);
+      box-shadow: 0 4px 12px rgba(11, 110, 79, 0.28);
+      border: 1.5px solid var(--brand-gold);
     }
 
     .brand-id strong {
@@ -130,17 +132,18 @@
 
     .nav-btn {
       background: var(--brand-orange);
-      color: var(--brand-navy);
+      color: var(--brand-white);
       font-weight: 900;
       font-size: 0.95rem;
       padding: 0.55rem 1.2rem;
       border-radius: var(--radius-md);
+      border: 1.5px solid var(--brand-gold);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .nav-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(255, 140, 66, 0.4);
+      box-shadow: 0 6px 16px rgba(217, 4, 41, 0.35);
     }
 
     /* Hero Section with Poster Watermark Overlay */
@@ -150,6 +153,7 @@
       padding: 3.5rem 0 4rem;
       position: relative;
       overflow: hidden;
+      border-bottom: 4px solid var(--brand-gold);
     }
 
     /* Poster Watermark inside Hero Background */
@@ -168,7 +172,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(13, 27, 42, 0.85) 0%, rgba(0, 86, 210, 0.72) 100%);
+      background: linear-gradient(135deg, rgba(7, 42, 32, 0.88) 0%, rgba(11, 110, 79, 0.76) 100%);
       pointer-events: none;
     }
 
@@ -200,13 +204,14 @@
 
     .badge-party {
       background: rgba(255, 255, 255, 0.14);
-      border: 1px solid rgba(63, 169, 245, 0.45);
+      border: 1px solid var(--brand-gold);
       color: var(--brand-white);
     }
 
     .badge-wilaya {
-      background: rgba(63, 169, 245, 0.22);
-      color: var(--brand-sky);
+      background: rgba(245, 158, 11, 0.2);
+      color: #FDE68A;
+      border: 1px solid rgba(245, 158, 11, 0.4);
     }
 
     .hero-title {
@@ -217,13 +222,13 @@
     }
 
     .hero-title span {
-      color: var(--brand-sky);
+      color: #FDE68A;
     }
 
     /* Core Mission Callout */
     .mission-box {
-      background: rgba(13, 27, 42, 0.68);
-      border-right: 5px solid var(--brand-orange);
+      background: rgba(7, 42, 32, 0.72);
+      border-right: 5px solid var(--brand-gold);
       padding: 1.25rem 1.45rem;
       border-radius: var(--radius-md);
       margin-bottom: 1.5rem;
@@ -267,15 +272,16 @@
 
     .btn-main {
       background: var(--brand-orange);
-      color: var(--brand-navy);
+      color: var(--brand-white);
       font-weight: 900;
       font-size: 1.05rem;
       padding: 0.9rem 1.65rem;
       border-radius: var(--radius-md);
+      border: 2px solid var(--brand-gold);
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      box-shadow: 0 10px 24px rgba(255, 140, 66, 0.35);
+      box-shadow: 0 10px 24px rgba(217, 4, 41, 0.35);
       transition: transform 0.2s ease;
     }
 
@@ -308,14 +314,14 @@
       border-radius: var(--radius-lg);
       padding: 1.75rem;
       box-shadow: 0 24px 50px rgba(0, 0, 0, 0.38);
-      border: 3px solid var(--brand-sky);
+      border: 3px solid var(--brand-gold);
       text-align: center;
       position: relative;
     }
 
     .id-card-eyebrow {
       display: inline-block;
-      background: rgba(0, 86, 210, 0.1);
+      background: rgba(11, 110, 79, 0.1);
       color: var(--brand-primary);
       font-weight: 900;
       font-size: 0.85rem;
@@ -330,8 +336,8 @@
       margin: 0 auto 1rem;
       border-radius: var(--radius-lg);
       padding: 5px;
-      background: var(--grad-main);
-      box-shadow: 0 12px 28px rgba(0, 86, 210, 0.25);
+      background: linear-gradient(135deg, var(--brand-primary), var(--brand-gold));
+      box-shadow: 0 12px 28px rgba(11, 110, 79, 0.25);
     }
 
     .id-portrait-wrap img {
@@ -355,7 +361,7 @@
     .id-card-role {
       font-size: 0.92rem;
       font-weight: 700;
-      color: #4A5568;
+      color: #374151;
       margin-bottom: 1.25rem;
     }
 
@@ -373,13 +379,14 @@
 
     .id-num-box.list {
       background: var(--brand-gray);
-      border: 2px solid rgba(0, 86, 210, 0.2);
+      border: 2px solid var(--brand-gold);
     }
 
     .id-num-box.cand {
-      background: var(--grad-main);
+      background: var(--brand-orange);
       color: var(--brand-white);
-      box-shadow: 0 8px 20px rgba(0, 86, 210, 0.25);
+      border: 2px solid var(--brand-gold);
+      box-shadow: 0 8px 20px rgba(217, 4, 41, 0.28);
     }
 
     .id-num-box small {
@@ -421,7 +428,7 @@
 
     .panel-tag {
       display: inline-block;
-      background: rgba(0, 86, 210, 0.1);
+      background: rgba(11, 110, 79, 0.12);
       color: var(--brand-primary);
       font-weight: 800;
       font-size: 0.85rem;
@@ -443,7 +450,7 @@
       color: var(--brand-white);
       padding: 1.1rem 1.25rem;
       border-radius: var(--radius-md);
-      border-right: 4px solid var(--brand-orange);
+      border-right: 4px solid var(--brand-gold);
       font-weight: 800;
       font-size: 1.08rem;
       margin-bottom: 1.25rem;
@@ -595,7 +602,7 @@
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
-      box-shadow: 0 8px 18px rgba(0, 86, 210, 0.25);
+      box-shadow: 0 8px 18px rgba(11, 110, 79, 0.25);
     }
 
     .voice-response {
@@ -603,7 +610,7 @@
       margin-top: 0.9rem;
       padding: 0.9rem;
       border-radius: var(--radius-md);
-      background: rgba(0, 179, 126, 0.12);
+      background: rgba(5, 150, 105, 0.12);
       border: 1.5px solid var(--brand-green);
       font-weight: 800;
       font-size: 0.92rem;
@@ -615,7 +622,7 @@
       background: var(--brand-navy);
       color: var(--brand-white);
       padding: 2rem 0;
-      border-top: 4px solid var(--brand-primary);
+      border-top: 4px solid var(--brand-gold);
     }
 
     .footer-inner {
@@ -631,7 +638,7 @@
       align-items: center;
       gap: 0.75rem;
       background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(63, 169, 245, 0.35);
+      border: 1px solid rgba(245, 158, 11, 0.45);
       padding: 0.5rem 1rem;
       border-radius: var(--radius-md);
     }
