@@ -47,6 +47,27 @@
     body {
       overflow-x: hidden;
       background-color: var(--brand-gray);
+      position: relative;
+    }
+
+    /* Full-Page Campaign Poster Watermark on Background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url('poster.jpg');
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+      opacity: 0.08;
+      pointer-events: none;
+      z-index: 0;
+      filter: saturate(1.1);
+    }
+
+    header, section, footer {
+      position: relative;
+      z-index: 1;
     }
 
     a {
@@ -96,7 +117,7 @@
       background: var(--grad-main);
       color: var(--brand-white);
       font-weight: 900;
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       padding: 0.25rem 0.85rem;
       border-radius: var(--radius-md);
       box-shadow: 0 4px 12px rgba(0, 86, 210, 0.25);
@@ -106,12 +127,6 @@
       font-size: 1.2rem;
       font-weight: 900;
       color: var(--brand-navy);
-    }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
     }
 
     .nav-btn {
@@ -129,7 +144,7 @@
       box-shadow: 0 6px 16px rgba(255, 140, 66, 0.4);
     }
 
-    /* Hero Section */
+    /* Hero Section with Poster Watermark Overlay */
     .hero {
       background: var(--grad-dark);
       color: var(--brand-white);
@@ -138,13 +153,24 @@
       overflow: hidden;
     }
 
+    /* Poster Watermark inside Hero Background */
     .hero::before {
       content: '';
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(circle at 15% 20%, rgba(63, 169, 245, 0.22), transparent 45%),
-        radial-gradient(circle at 85% 80%, rgba(255, 140, 66, 0.16), transparent 45%);
+      background-image: url('poster.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.14;
+      mix-blend-mode: luminosity;
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(13, 27, 42, 0.92) 0%, rgba(0, 86, 210, 0.82) 100%);
       pointer-events: none;
     }
 
@@ -161,27 +187,27 @@
       display: flex;
       flex-wrap: wrap;
       gap: 0.6rem;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.1rem;
     }
 
     .badge {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      padding: 0.35rem 0.9rem;
+      padding: 0.35rem 0.95rem;
       border-radius: 999px;
       font-size: 0.9rem;
       font-weight: 800;
     }
 
     .badge-party {
-      background: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.14);
       border: 1px solid rgba(63, 169, 245, 0.45);
       color: var(--brand-white);
     }
 
     .badge-wilaya {
-      background: rgba(63, 169, 245, 0.2);
+      background: rgba(63, 169, 245, 0.22);
       color: var(--brand-sky);
     }
 
@@ -189,7 +215,7 @@
       font-size: clamp(2.3rem, 4.8vw, 3.5rem);
       font-weight: 900;
       line-height: 1.18;
-      margin-bottom: 1.1rem;
+      margin-bottom: 1.15rem;
     }
 
     .hero-title span {
@@ -198,50 +224,15 @@
 
     /* Core Mission Callout */
     .mission-box {
-      background: rgba(13, 27, 42, 0.6);
+      background: rgba(13, 27, 42, 0.68);
       border-right: 5px solid var(--brand-orange);
-      padding: 1.2rem 1.4rem;
+      padding: 1.25rem 1.45rem;
       border-radius: var(--radius-md);
       margin-bottom: 1.5rem;
-      font-size: clamp(1.1rem, 2vw, 1.3rem);
+      font-size: clamp(1.12rem, 2vw, 1.32rem);
       font-weight: 800;
-      line-height: 1.6;
-    }
-
-    /* Big Eye-Catching Numbers Row */
-    .numbers-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .num-card {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1.5px solid rgba(255, 255, 255, 0.18);
-      border-radius: var(--radius-lg);
-      padding: 1rem 1.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .num-card.highlight {
-      background: var(--grad-main);
-      border-color: var(--brand-sky);
-      box-shadow: 0 10px 25px rgba(0, 86, 210, 0.35);
-    }
-
-    .num-card small {
-      font-size: 0.95rem;
-      font-weight: 800;
-      opacity: 0.95;
-    }
-
-    .num-card strong {
-      font-size: 2.6rem;
-      font-weight: 900;
-      line-height: 1;
+      line-height: 1.65;
+      backdrop-filter: blur(6px);
     }
 
     /* 4 CV Credentials Pills */
@@ -253,12 +244,12 @@
     }
 
     .cv-pill {
-      background: var(--brand-white);
+      background: rgba(255, 255, 255, 0.96);
       color: var(--brand-navy);
       padding: 0.75rem 1rem;
       border-radius: var(--radius-md);
       font-weight: 800;
-      font-size: 0.98rem;
+      font-size: 0.96rem;
       display: flex;
       align-items: center;
       gap: 0.6rem;
@@ -281,7 +272,7 @@
       color: var(--brand-navy);
       font-weight: 900;
       font-size: 1.05rem;
-      padding: 0.9rem 1.6rem;
+      padding: 0.9rem 1.65rem;
       border-radius: var(--radius-md);
       display: inline-flex;
       align-items: center;
@@ -295,9 +286,9 @@
     }
 
     .btn-outline {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.12);
       color: var(--brand-white);
-      border: 1.5px solid rgba(255, 255, 255, 0.3);
+      border: 1.5px solid rgba(255, 255, 255, 0.35);
       font-weight: 800;
       font-size: 1rem;
       padding: 0.9rem 1.4rem;
@@ -309,23 +300,101 @@
     }
 
     .btn-outline:hover {
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.22);
     }
 
-    /* Official Poster Frame */
-    .poster-showcase {
+    /* بطاقة التعريف الانتخابية · ولاية البليدة (With Simple Portrait) */
+    .candidate-id-card {
       background: var(--brand-white);
-      padding: 0.85rem;
+      color: var(--brand-navy);
       border-radius: var(--radius-lg);
-      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.4);
+      padding: 1.75rem;
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.38);
       border: 3px solid var(--brand-sky);
+      text-align: center;
+      position: relative;
     }
 
-    .poster-showcase img {
+    .id-card-eyebrow {
+      display: inline-block;
+      background: rgba(0, 86, 210, 0.1);
+      color: var(--brand-primary);
+      font-weight: 900;
+      font-size: 0.85rem;
+      padding: 0.3rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 1.1rem;
+    }
+
+    .id-portrait-wrap {
+      width: 165px;
+      height: 165px;
+      margin: 0 auto 1rem;
+      border-radius: 50%;
+      padding: 5px;
+      background: var(--grad-main);
+      box-shadow: 0 12px 28px rgba(0, 86, 210, 0.25);
+    }
+
+    .id-portrait-wrap img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 50%;
+      background: var(--brand-white);
       display: block;
+    }
+
+    .id-card-name {
+      font-size: 1.65rem;
+      font-weight: 900;
+      color: var(--brand-navy);
+      line-height: 1.25;
+      margin-bottom: 0.2rem;
+    }
+
+    .id-card-role {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #4A5568;
+      margin-bottom: 1.25rem;
+    }
+
+    .id-numbers-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.85rem;
+    }
+
+    .id-num-box {
       border-radius: var(--radius-md);
+      padding: 0.85rem 0.75rem;
+      text-align: center;
+    }
+
+    .id-num-box.list {
+      background: var(--brand-gray);
+      border: 2px solid rgba(0, 86, 210, 0.2);
+    }
+
+    .id-num-box.cand {
+      background: var(--grad-main);
+      color: var(--brand-white);
+      box-shadow: 0 8px 20px rgba(0, 86, 210, 0.25);
+    }
+
+    .id-num-box small {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 800;
+      margin-bottom: 0.15rem;
+    }
+
+    .id-num-box strong {
+      font-size: 2.4rem;
+      font-weight: 900;
+      line-height: 1;
     }
 
     /* Interactive Ballot + Form Dual Section */
@@ -341,7 +410,8 @@
     }
 
     .card-panel {
-      background: var(--brand-white);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
       border-radius: var(--radius-lg);
       padding: 2rem;
       box-shadow: var(--shadow-card);
@@ -363,7 +433,7 @@
     }
 
     .panel-title {
-      font-size: 1.6rem;
+      font-size: 1.55rem;
       font-weight: 900;
       color: var(--brand-navy);
       margin-bottom: 0.75rem;
@@ -373,7 +443,7 @@
     .vote-quote {
       background: var(--brand-navy);
       color: var(--brand-white);
-      padding: 1rem 1.25rem;
+      padding: 1.1rem 1.25rem;
       border-radius: var(--radius-md);
       border-right: 4px solid var(--brand-orange);
       font-weight: 800;
@@ -588,9 +658,10 @@
         grid-template-columns: 1fr;
       }
 
-      .poster-showcase {
+      .candidate-id-card {
         max-width: 420px;
         margin: 0 auto;
+        width: 100%;
       }
     }
 
@@ -611,17 +682,15 @@
         <span class="num-pill">13 | 46</span>
         <strong>عيظ دنيا · Aidh Dounia</strong>
       </a>
-      <div class="nav-actions">
-        <a href="#citizen-voice" class="nav-btn">تواصل مباشر مع المترشحة</a>
-      </div>
+      <a href="#citizen-voice" class="nav-btn">تواصل مباشر مع المترشحة</a>
     </div>
   </header>
 
-  <!-- Hero: Everything Essential at a Glance -->
+  <!-- Hero Section -->
   <section class="hero" id="top">
     <div class="container hero-grid">
 
-      <!-- Right Column: Headline, Mission, Numbers & CV -->
+      <!-- Right Column: Headline, Mission & CV -->
       <div>
         <div class="election-badges">
           <span class="badge badge-party">جبهة الجزائر الجديدة</span>
@@ -634,17 +703,6 @@
 
         <div class="mission-box">
           « توصيل صوت الشعب للجهات المعنية والحرص على إيجاد جواب مقنع وتغيير إن أمكن »
-        </div>
-
-        <div class="numbers-row">
-          <div class="num-card">
-            <small>رقم القائمة</small>
-            <strong style="color: var(--brand-sky);">13</strong>
-          </div>
-          <div class="num-card highlight">
-            <small>رقم المترشحة</small>
-            <strong>46</strong>
-          </div>
         </div>
 
         <!-- Concise 4 CV Credentials -->
@@ -673,14 +731,32 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
           </a>
           <a href="poster.jpg" download="Aidh-Dounia-List13-46.jpg" class="btn-outline">
-            <span>تحميل الملصق</span>
+            <span>تحميل الملصق الانتخابي</span>
           </a>
         </div>
       </div>
 
-      <!-- Left Column: Official Campaign Poster -->
-      <div class="poster-showcase">
-        <img src="poster.jpg" alt="عيظ دنيا - قائمة 13 - رقم المترشحة 46" />
+      <!-- Left Column: بطاقة التعريف الانتخابية · ولاية البليدة (With Simple Portrait) -->
+      <div class="candidate-id-card" aria-label="بطاقة التعريف الانتخابية · ولاية البليدة">
+        <span class="id-card-eyebrow">بطاقة التعريف الانتخابية · ولاية البليدة</span>
+
+        <div class="id-portrait-wrap">
+          <img src="portrait.jpg" alt="الصورة الرسمية للمترشحة عيظ دنيا (Aidh Dounia)" />
+        </div>
+
+        <h2 class="id-card-name">عيظ دنيا (Aidh Dounia)</h2>
+        <p class="id-card-role">حزب جبهة الجزائر الجديدة — المجلس الشعبي الولائي</p>
+
+        <div class="id-numbers-grid">
+          <div class="id-num-box list">
+            <small>رقم القائمة</small>
+            <strong style="color: var(--brand-primary);">13</strong>
+          </div>
+          <div class="id-num-box cand">
+            <small>رقم المترشحة</small>
+            <strong>46</strong>
+          </div>
+        </div>
       </div>
 
     </div>
