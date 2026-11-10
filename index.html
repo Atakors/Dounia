@@ -868,7 +868,6 @@
       <span>الحملة الانتخابية للمترشحة <strong>عيظ دنيا</strong> — ولاية البليدة</span>
       <div class="social-pill">
         <strong>Aidh Dounia ❤️</strong>
-        <button type="button" class="copy-btn" id="copyHandleBtn">نسخ الحساب</button>
       </div>
     </div>
   </footer>
@@ -937,19 +936,6 @@
         submitVoiceBtn.style.opacity = '1';
         submitVoiceBtnText.textContent = 'إرسال الانشغال';
       }
-    });
-
-    // 3. Copy Social Handle
-    const copyHandleBtn = document.getElementById('copyHandleBtn');
-    copyHandleBtn.addEventListener('click', () => {
-      navigator.clipboard.writeText('Aidh Dounia ❤️').then(() => {
-        copyHandleBtn.textContent = 'تم النسخ ✓';
-        copyHandleBtn.style.background = 'var(--brand-green)';
-        setTimeout(() => {
-          copyHandleBtn.textContent = 'نسخ الحساب';
-          copyHandleBtn.style.background = '';
-        }, 2000);
-      });
     });
   </script>
 </body>
