@@ -16,7 +16,7 @@
 
 const SHEET_NAME = 'انشغالات_المواطنين';
 
-function doPost(e) {
+function handleRequest(e) {
   const lock = LockService.getScriptLock();
   lock.tryLock(10000);
 
@@ -39,12 +39,23 @@ function doPost(e) {
       sheet.appendRow(headers);
       sheet.getRange(1, 1, 1, headers.length)
         .setFontWeight('bold')
-        .setBackground('#0056D2')
+        .setBackground('#0B6E4F')
         .setFontColor('#FFFFFF');
       sheet.setFrozenRows(1);
     }
 
-    const params = e.parameter || {};
+    let params = (e && e.parameter) ? Object.assign({}, e.parameter) : {};
+
+    // Also parse raw postData contents if sent as JSON or text/plain
+    if (e && e.postData && e.postData.contents) {
+      try {
+        const parsed = JSON.parse(e.postData.contents);
+        params = Object.assign(params, parsed);
+      } catch (_) {
+        // URL-encoded fallback
+      }
+    }
+
     const rowData = [
       params.timestamp || new Date().toLocaleString('ar-DZ'),
       params.name || 'مواطن(ة) من البليدة',
@@ -66,4 +77,12 @@ function doPost(e) {
   } finally {
     lock.releaseLock();
   }
+}
+
+function doPost(e) {
+  return handleRequest(e);
+}
+
+function doGet(e) {
+  return handleRequest(e);
 }
